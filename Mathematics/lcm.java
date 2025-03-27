@@ -27,4 +27,13 @@ public class lcm {
         }
         return gcd(b, a%b);
     }
+    //without recursion
+    static int gcd1(int a, int b){
+        while(b != 0){
+            int temp = b;
+            b = b%a;
+            a = temp;
+        }
+        return a;
+    }
 }
