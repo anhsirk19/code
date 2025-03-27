@@ -2,7 +2,7 @@ package Mathematics;
 
 public class gcd {
     public static void main(String[] args) {
-        System.out.println(answer(100, 200));
+        System.out.println(answer(43, 91));
         System.out.println(answer1(100, 200));
     }
     //naive approach o(min(a, b))
