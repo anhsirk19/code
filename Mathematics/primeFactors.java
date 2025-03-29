@@ -66,6 +66,7 @@ public class primeFactors {
     }
 
     // sqrt(n)
+    //
     static boolean isPrime2(int n) {
         if (n == 1) {
             return false;
