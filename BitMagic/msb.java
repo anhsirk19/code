@@ -1,5 +1,5 @@
 package BitMagic;
-
+//to find the most significant bit
 public class msb {
     public static void main(String[] args) {
         System.out.println(ans(45));
