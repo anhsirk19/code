@@ -1,6 +1,7 @@
 public class maxSubArray {
     public static void main(String[] args) {
         int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
+        System.out.println(answer2(arr));
     }
     //brute 
     //tc is o(n^3)
