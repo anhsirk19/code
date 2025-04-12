@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
-
+//Print a sequence of numbers starting with n, without using a loop. Replace n with n - 5, n−5... until n≤0. 
+//Then, replace n with n+5, n + 5, n+5 until n regains its initial value.
 public class printPattern {
     public static void main(String[] args) {
         System.out.println(answer(16));
