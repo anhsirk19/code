@@ -1,6 +1,9 @@
 import java.util.Arrays;
 import java.util.HashSet;
 
+//poblem statement
+//to count the distinct elemnts in the array
+
 public class countDistinct {
     public static void main(String[] args) {
         int[] nums = {10, 20, 20, 10, 30, 10};
@@ -42,7 +45,7 @@ public class countDistinct {
 
     //using hashset
     //tc is o(n)
-    //sc is o(n)
+    //sc is o(n) for using set
     static int answer2(int[] nums){
         HashSet<Integer> set = new HashSet<>();
         for(int i = 0 ; i < nums.length ; i++){
