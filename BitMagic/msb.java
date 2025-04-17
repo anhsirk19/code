@@ -29,4 +29,21 @@ public class msb {
         }
         return msb;
     }
+    //tc is o(1)
+    static int getMSB(int n) {
+        if (n == 0) return 0;
+        int msb = (int)Math.pow(2, (int)(Math.log(n) / Math.log(2)));
+        return msb;
+    }
+    
+
+    //tc is o(1)
+    static int getMSB2(int n) {
+        n |= (n >> 1);
+        n |= (n >> 2);
+        n |= (n >> 4);
+        n |= (n >> 8);
+        n |= (n >> 16);
+        return n ^ (n >> 1);
+    }
 }
