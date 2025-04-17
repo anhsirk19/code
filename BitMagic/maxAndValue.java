@@ -6,7 +6,7 @@ public class maxAndValue {
         System.out.println(answer(arr));
     }
     //naive
-    //tc is o(N*N)
+    //tc is o(N^2)
     static int answer(int[] arr){
         int ans = 0;
         for(int i = 0 ; i < arr.length - 1 ; i++){
@@ -18,8 +18,26 @@ public class maxAndValue {
     }
 
     //efficient method
-    //
+    //tc is O(32*N)
     static int answer1(int[] arr){
-        return -1;
+        int res = 0, count;
+        //iterate over total of 32 bits
+        //from msb to lsb
+        for(int bit = 31 ; bit >= 0 ; bit++){
+            count = checkBit(res | (1 << bit), arr, arr.length);
+            if(count >= 2){
+                res |= (1 << bit);
+            }
+        }
+        return res;
+    }
+    static int checkBit(int pattern, int arr[], int n){
+        int count = 0;
+        for(int i = 0 ; i < arr.length ; i++){
+            if((arr[i] & pattern) == pattern){
+                count++;
+            }
+        }
+        return count;
     }
 }

@@ -6,10 +6,10 @@ public class twoOdd {
         int[] arr = {5,6,10,6,10,6,3,3};
         answer(arr);
     }
-    //naive tc is o(N*N)
+    //naive tc is o(N^2)
 
     //using xor
-    //tc is
+    //tc is o(N)
     static void answer(int[] arr){
         int xor = 0;
         for(int i = 1 ; i < arr.length ; i++){

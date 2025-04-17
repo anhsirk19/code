@@ -5,6 +5,8 @@ public class powerSet {
         String s = "abc";
         answer(s);
     }
+    //tc is O(n*(2^n))
+    //sc is O(1)
     static void answer(String s){
         int n = s.length();
         int pow2 = (int)Math.pow(2, n);

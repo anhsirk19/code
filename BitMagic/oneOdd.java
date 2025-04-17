@@ -6,7 +6,7 @@ public class oneOdd {
         System.out.println(answer1(arr));
     }
     //naive
-    //tc is o(n*n)
+    //tc is o(n^2)
     static int answer(int[] arr){
         for(int i = 0; i < arr.length ; i++){
             int q = arr[i];
