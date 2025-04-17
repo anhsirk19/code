@@ -1,6 +1,10 @@
 import java.util.HashMap;
 import java.util.HashSet;
 
+//given an array of positive and negative numbers, find if there
+//is a subarray(of atleast size one)
+//with k sum
+
 public class subArrayWithK {
     public static void main(String[] args) {
         int[] nums = {-1,2,-1,2,4,6};
