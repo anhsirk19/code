@@ -1,5 +1,7 @@
 package BitMagic;
 
+//to find the right most dif bit in two numbers
+
 public class rightMostDiffBit {
     public static void main(String[] args) {
         System.out.println(posOfRightMostDiffBit1(52, 4));
