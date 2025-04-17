@@ -2,9 +2,10 @@ package BitMagic;
 
 public class countSetBits {
     public static void main(String[] args) {
-        System.out.println(answer4(258));
+        System.out.println(answer4(17));
     }
     //naive
+    //tc is o(logn)
     static int answer(int n){
         int x = 1;
         int count = 0;
@@ -16,6 +17,7 @@ public class countSetBits {
         }
         return count;
     }
+    //tc is o(logn)
     static int answer1(int n){
         int count = 0;
         while(n != 0){
@@ -26,7 +28,7 @@ public class countSetBits {
         }
         return count;
     }
-    //
+    //tc is o(logn)
     static int answer2(int n){
         int count = 0;
         while(n != 0){
