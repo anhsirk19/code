@@ -10,7 +10,7 @@ public class rearrangeArrayAlternaticely {
         System.out.println(Arrays.toString(arr));
     }
     ////Use modulus and division trick to store two numbers in one array index.
-    /// tc is o(n)
+    /// tc is o(nlogn)
     /// //sc is o(1)
     public static void rearrange(int arr[]) {
         // code here
