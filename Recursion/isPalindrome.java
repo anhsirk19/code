@@ -6,6 +6,8 @@ public class isPalindrome {
         System.out.println(ispal(s, 0, s.length()-1));
     }
 
+    //tc is o(n)
+    //sc is o(n)
     static boolean ispal(String s, int start, int end){
         if(start >= end){
             return true;
