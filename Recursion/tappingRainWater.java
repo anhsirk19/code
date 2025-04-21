@@ -48,4 +48,32 @@ public class tappingRainWater {
         }
         return res;
     }
+    //using two pointer approach
+    //tc is o(n)
+    //sc is o(1)
+    static int maxWater2(int arr[]){
+        int n = arr.length;
+        int res = 0;
+        int lmax = 0, rmax = 0;
+        int i = 0, j = n-1;
+        
+        while(i <= j){
+            if(arr[i] <= arr[j]){
+                if(arr[i] > lmax){
+                    lmax = arr[i];
+                }else{
+                    res = res + lmax - arr[i];
+                }
+                i++;
+            }else{
+                if(arr[j] > rmax){
+                    rmax = arr[j];
+                }else{
+                    res = res + rmax - arr[j];
+                }
+                j--;
+            }
+        }
+        return res;
+    }
 }
