@@ -27,6 +27,8 @@ public class binarySearch {
     }
 
     //recursive approach
+    //tc is o(logn)
+    //sc is o(logn)
     static int binary_search1(int[] arr, int low, int high, int target){
         //base case
         //this means no target found
