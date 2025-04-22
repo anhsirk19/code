@@ -45,3 +45,6 @@ public class binarySearch {
         }
     }
 }
+
+//Arrays.binarysearch() works for arrays which can be of primitive data type 
+//also. Collections.binarysearch() works for objects Collections like ArrayList and LinkedList.
