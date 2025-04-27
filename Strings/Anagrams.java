@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 //q
-//
+//check if the strings are anagrams or not
 
 public class Anagrams {
     public static void main(String[] args) {

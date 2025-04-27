@@ -2,6 +2,8 @@ package Strings;
 
 import java.util.HashMap;
 
+//q
+//Longest String W/o repeating characters: 
 public class LongestSubStr {
     public static void main(String[] args) {
         String s = "GEEKSFORGEEKS";
