@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+//q
+//count frequencies of characters in a string, (string contains only lowercase letters)
+
 public class CountFrequency {
     public static void main(String[] args) {
         String str = "abacus";
@@ -41,7 +44,7 @@ public class CountFrequency {
             System.out.println(set.getKey() + " -> " + set.getValue());
         } 
     }
-    //using dat, direct address table
+    //using dat, direct address table// since there are only 26 char in alphabets(lower case)
     //tc is o(n)
     //sc is o(1)
     static void answer2(String s){
