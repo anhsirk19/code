@@ -8,7 +8,9 @@ package Recursion;
 
 public class ropeCutting {
     public static void main(String[] args) {
-        
+        int n = 5, a = 2, b = 1, c = 5;
+    	
+    	System.out.println(answer(n, a, b, c));
     }
 
     static int answer(int n, int a, int b, int c){
@@ -18,8 +20,11 @@ public class ropeCutting {
         if(n == 0){
             return 0;
         }
-        answer(n-a, a, b, c);
-        answer(n-b, a, b, c);
-        answer(n-c, a, b, c);
+        int res = Math.max(answer(n-a, a, b, c), Math.max(answer(n-b, a, b, c), answer(n-c, a, b, c)));
+        if(res == -1){
+            return res;
+        }
+        return res + 1;
+
     }
 }
