@@ -11,6 +11,7 @@ public class FirstRepeatingChar {
     public static void main(String[] args) {
         String s = "geeksforgeeks";
         System.out.println(solution1(s));
+        System.out.println(solution2(s));
     }
     //tc is o(n)
     //sc is o(N)
@@ -32,10 +33,27 @@ public class FirstRepeatingChar {
         HashSet<Character> set = new HashSet<>();
         char ans = '0';
         for(int i = s.length() - 1 ; i >= 0; i--){
-            if(set.contains(s.charAt(i))){
+            if(!set.contains(s.charAt(i))){
                 ans = s.charAt(i);
             }else{
                 set.add(s.charAt(i));
+            }
+        }
+        return ans;
+    }
+
+    static final int CHAR = 256;
+    //tc is o(n)
+    //sc is o(1)
+    //this method is only for No (only ASCII/Latin-1 characters properly)
+    static char solution2(String s){
+        int[] arr = new int[CHAR];
+        char ans = '0';
+        for(int i = s.length()-1 ; i >= 0 ; i--){
+            if(arr[s.charAt(i)] != 0){
+                ans = s.charAt(i);
+            }else{
+                arr[s.charAt(i)]++;
             }
         }
         return ans;

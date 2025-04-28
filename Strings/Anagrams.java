@@ -3,6 +3,9 @@ package Strings;
 import java.util.Arrays;
 import java.util.HashMap;
 
+//see here, we can use dat, if it contains only ascii characters, int[256]
+//this decrese the space complexity
+
 //q
 //check if the strings are anagrams or not
 
