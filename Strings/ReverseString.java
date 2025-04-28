@@ -36,4 +36,10 @@ public class ReverseString {
         }
         return new String(sb);
     }
+
+    static String reverse2(String s){
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        return sb.toString();
+    }
 }
