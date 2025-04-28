@@ -9,6 +9,8 @@ public class FirstOccurence {
         System.out.println(firstOccurence(txt, pat));
     }
 
+    //tc is o(m*n)
+    //sc is o(1)
     static int firstOccurence(String txt, String pat) {
         // in-built function
         //return txt.indexOf(pat);
