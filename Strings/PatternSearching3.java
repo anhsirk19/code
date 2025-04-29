@@ -6,8 +6,8 @@ package Strings;
 
 public class PatternSearching3 {
     public static void main(String[] args) {
-        String S = "aabaacaadaabaaba";
-        String P = "aaba";
+        String S = "aabbccddeeddff";
+        String P = "ddee";
         solution(S, P);
     }
     static int d = 256;
@@ -49,6 +49,7 @@ public class PatternSearching3 {
             }
             if(i < n-m){
                 t = (d*(t - txt.charAt(i)*h) + txt.charAt(i+m))%q;
+                
                 if(t < 0){
                     t = t + q;
                 }
