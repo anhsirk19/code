@@ -4,8 +4,8 @@ package Strings;
 
 public class PatternSearching4 {
     public static void main(String[] args) {
-        String txt = "ababcabcabababd";
-        String pat = "ababd";
+        String txt = "AAAAA";
+        String pat = "AAA";
         System.out.println(kmp(txt, pat)); 
         
     }
@@ -20,10 +20,17 @@ public class PatternSearching4 {
         //now iterate over tx
         int j = -1;//to iterate over lps
         int i = 0;//to iterate over the txt
+        boolean flag = false;
         while(i < n && j < m-1){
             if(txt.charAt(i) == pat.charAt(j+1)){
                 i++;
                 j++;
+                //if pat found
+                if(j == m-1){
+                    flag = true;
+                    System.out.println(i-m + " ");
+                    j = lps[j] - 1;
+                }
             }else{
                 if(j == -1){
                     i++;
@@ -32,7 +39,7 @@ public class PatternSearching4 {
                 }
             }
         }
-        if(j == m-1){
+        if(flag){
             return true;
         }
         return false;
