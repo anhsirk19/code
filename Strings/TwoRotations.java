@@ -7,8 +7,12 @@ package Strings;
 //Note: Both rotations should be performed in same direction chosen initially.
 public class TwoRotations {
     public static void main(String[] args) {
-        
+        String s1 = "amazon"; 
+        String s2 = "azonam";
+        System.out.println(isRotated(s1, s2));
     }
+    //tc is o(n)
+    //sc is o(1)
     public static boolean isRotated(String s1, String s2) {
         // Your code here
         if(s1.length() != s2.length()){
