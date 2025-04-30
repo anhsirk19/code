@@ -12,7 +12,7 @@ public class PatternSearching1 {
     static void solution(String text, String pattern){
         int n = text.length();
         int m = pattern.length();
-        for(int i = 0 ; i < n-m ; i++){
+        for(int i = 0 ; i <= n-m ; i++){
             int count = 0;
             for(int j = 0 ; j < m ; j++){
                 if(text.charAt(j + i) == pattern.charAt(j)){
