@@ -11,9 +11,9 @@ import java.util.HashMap;
 
 public class Anagrams {
     public static void main(String[] args) {
-        String s1 = "hello";
-        String s2 = "llohe";
-        System.out.println(answer1(s1, s2));
+        String s1 = "forg";
+        String s2 = "frog";
+        System.out.println(answer2(s1, s2));
     }
     //using sorting
     //tc is o(nlogn)
@@ -70,25 +70,5 @@ public class Anagrams {
         }
         return true;
     }
-    //using hashMap
-    //tc is o(n)
-    //sc is o(n), here 1 hashmaps are used, 1 loops
-    static boolean answer3(String s1, String s2){
-        if(s1.length() != s2.length()){
-            return false;
-        }
-        HashMap<Character, Integer> map = new HashMap<>();
-
-        for(int i = 0 ; i < s1.length() ; i++){
-            map.put(s1.charAt(i), map.getOrDefault(s1.charAt(i), 0) + 1);
-            map.put(s2.charAt(i), map.getOrDefault(s2.charAt(i), 0) - 1);
-            if(map.get(s2.charAt(i)) == 0){
-                map.remove(s2.charAt(i));
-            }
-        }
-        if(map.isEmpty()){
-            return true;
-        }
-        return false;
-    }
+    
 }
