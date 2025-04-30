@@ -8,6 +8,8 @@ public class Case_specificSorting {
         System.out.println(caseSort(str));
     }
 
+    //tc is o(nlogn)
+    //sc is o(n)
     public static String caseSort(String str) {
         // Your code here
         StringBuilder l = new StringBuilder();
