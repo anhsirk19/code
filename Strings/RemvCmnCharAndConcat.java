@@ -23,7 +23,7 @@ public class RemvCmnCharAndConcat {
                 commonSet.add(s2.charAt(i));
             }
         }
-        //we have common ele in commonSet
+        //we have common elents in commonSet
         StringBuilder sb = new StringBuilder();
         for(int i = 0 ; i < s1.length() ; i++){
             char ch = s1.charAt(i);
