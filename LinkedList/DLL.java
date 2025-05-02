@@ -138,6 +138,7 @@ public class DLL {
         private int data;
         Node next;
         Node prev;
+        @SuppressWarnings("unused")
         Node(int value){
             this.data = value;
         }

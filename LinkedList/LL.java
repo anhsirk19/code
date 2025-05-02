@@ -23,7 +23,7 @@ public class LL {
     // 1.2 insert at end
     public void insertAtEnd(int value){
         if(size == 0){
-            insertAtEnd(value);
+            insertAtStart(value);
             return;
         }
         Node newNode = new Node(value);
@@ -58,10 +58,10 @@ public class LL {
     // 2.1 deleteFirst
 
     public int deleteFirst(){
-        int val = head.data;
         if(head == null){
             return -1;
         }
+        int val = head.data;
         head = head.next;
         if(head == null){
             tail = null;
@@ -87,16 +87,16 @@ public class LL {
     // 2.3 delete ele at given index
 
     public int deleteIndex(int index){
-
+        if(index < 0 || index >= size){
+            return -1;
+        }
         if(index == 0){
             return deleteFirst();
         }
         if(index == size-1){
             return deleteEnd();
         }
-        if(index < 0 || index >= size){
-            return -1;
-        }
+        
         Node prevIndex = get(index-1);
         int val = prevIndex.next.data;
         prevIndex.next = prevIndex.next.next;
@@ -119,6 +119,9 @@ public class LL {
     //to get ref node at index
 
     public Node get(int index){
+        if(index < 0 || index >= size){
+            return null;
+        }
         Node temp = head;
         for(int i = 0 ; i < index ; i++){
             temp = temp.next;
