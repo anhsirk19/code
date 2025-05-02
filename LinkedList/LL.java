@@ -74,7 +74,7 @@ public class LL {
 
     public int deleteEnd(){
         if(size <= 1){
-            deleteFirst();
+            return deleteFirst();
         }
         Node secondLast = get(size-1);
         int val = tail.data;
@@ -89,15 +89,15 @@ public class LL {
     public int deleteIndex(int index){
 
         if(index == 0){
-            deleteFirst();
+            return deleteFirst();
         }
         if(index == size-1){
-            deleteEnd();
+            return deleteEnd();
         }
         if(index < 0 || index >= size){
             return -1;
         }
-        Node prevIndex = get(index);
+        Node prevIndex = get(index-1);
         int val = prevIndex.next.data;
         prevIndex.next = prevIndex.next.next;
 
@@ -120,7 +120,7 @@ public class LL {
 
     public Node get(int index){
         Node temp = head;
-        for(int i = 1 ; i < index ; i++){
+        for(int i = 0 ; i < index ; i++){
             temp = temp.next;
         }
         return temp;
