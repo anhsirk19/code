@@ -13,7 +13,6 @@ public class Removingconsecutiveduplicates2 {
         // code here
         Stack<Character> st = new Stack<>();
         for(char ch : s.toCharArray()){
-            System.out.println(ch);
             if(st.isEmpty()){
                 st.push(ch);
             }
